@@ -1,0 +1,35 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(5, 5, 105);
+    color: white;
+}
+#titulo{
+    text-align: center;
+}
+#conteudo{
+    background-color: white;
+    min-width: 100px;
+    max-width: 500px;
+    margin: auto;
+    border-radius: 15px;
+    padding: 15px;
+    color:black;
+    font: 18px arial;
+}
+#rodape{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+}
+img{
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+}
+input{
+    margin: 5px 5px 10px 0;
+}
+select{
+    width: 300px;
+}
