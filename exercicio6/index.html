@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romano para inteiro</title>
+</head>
+<body>
+<script>
+    var romanToInt = function(entrada) {
+    let acumulador = 0 
+    let romanos = {
+    'I' : 1,
+    'V' : 5,
+    'X' : 10,
+    'L' : 50,
+    'C' : 100,
+    'D' : 500,
+    'M' : 1000
+    }
+    for(let i=0;i<entrada.length;i++){
+            if(entrada[i] === 'I' && entrada[i+1] === 'V'){
+                acumulador += 4
+                i++
+            }else if(entrada[i] === 'I' && entrada[i+1] === 'X'){
+                acumulador+=9
+                i++
+            }else if(entrada[i] === 'X' && entrada[i+1] === 'L'){
+                acumulador+=40
+                i++
+            }else if(entrada[i] === 'X' && entrada[i+1] === 'C'){
+                acumulador+=90
+                i++
+            }else if(entrada[i] === 'C' && entrada[i+1] === 'D'){
+                acumulador+=400
+                i++
+            }else if(entrada[i] === 'C' && entrada[i+1] === 'M'){
+                acumulador+=900
+                i++
+            }else{
+                acumulador += romanos[entrada[i]]
+            }
+        }
+    return acumulador 
+    };
+    console.log(romanToInt('XIVV'))
+</script>
+</body>
+</html>
